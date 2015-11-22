@@ -1,0 +1,29 @@
+$visor-width: 15px;
+
+.c-visor, .c-frame {
+  border: $visor-width solid $white;
+  transition: background-color ease-in 500ms;
+}
+
+.c-highlight {
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.c-header {
+  &__logo {
+    width: 75px;
+    height: 75px;
+    height: auto;
+  }
+  &__logo-name {
+    height: 100%;
+    &__content {
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+}

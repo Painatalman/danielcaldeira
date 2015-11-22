@@ -1,0 +1,51 @@
+$header-height: 125px;
+$header-padding-top: 25px;
+$header-padding-bottom: 30px;
+
+.l-frame {
+  border: 15px solid $white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.l-main-content, .l-frame__content {
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.l-main-content {
+
+}
+
+
+.l-header {
+  height: $header-height;
+  padding: $header-padding-top 0 $header-padding-bottom;
+
+  border-bottom: 3px solid $white;
+
+  &__col, &__row {
+    height: 100%;
+  }
+
+  &__logo {
+    width: 75px;
+    height: 75px;
+    height: auto;
+  }
+
+  &__logo-name {
+    height: 100%;
+    &__content {
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+}

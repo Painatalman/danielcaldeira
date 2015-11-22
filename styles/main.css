@@ -1,0 +1,36 @@
+/*$color: pink;
+
+.nested {
+  &_nesting {
+    color: $color;
+  }
+}*/
+@import "settings/settings";
+
+@import "partials/reset";
+@import "partials/base";
+@import "partials/grid";
+@import "partials/layout";
+@import "partials/components";
+
+.l-fixed {
+  position: fixed;
+
+}
+
+
+
+#main-content {
+  overflow: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
+
+
+
+.s-bloody, .c-visor--bloody {
+  background-color: rgba(255,0,0,0.7);
+}
