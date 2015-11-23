@@ -1,0 +1,10 @@
+.menu-list {
+  list-style-type: none;
+
+  font-size: 18px;
+
+  &__item {
+    float: right;
+    text-transform: uppercase;
+  }
+}

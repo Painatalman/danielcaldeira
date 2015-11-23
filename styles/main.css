@@ -11,6 +11,7 @@
 @import "partials/base";
 @import "partials/grid";
 @import "partials/layout";
+@import "partials/navs";
 @import "partials/components";
 
 #main-content {
