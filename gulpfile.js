@@ -1,7 +1,8 @@
 "use strict";
 
 // gulp and plugins
-var gulp = require('gulp'),
+var
+  gulp = require('gulp'),
   gutil = require('gulp-util'), // logging
   notify = require('gulp-notify'), // workspace notifications
   postcss = require('gulp-postcss'),
@@ -9,7 +10,7 @@ var gulp = require('gulp'),
   precss = require('precss'),
   cssnano = require('cssnano'),
   simplevars = require('postcss-simple-vars'),
-  // sourcemaps = require('gulp-sourcemaps'),
+  sourcemaps = require('gulp-sourcemaps'),
   // uglify = require('gulp-uglify'),
   // concat = require('gulp-concat'),
   // imagemin = require('gulp-imagemin'),
@@ -64,15 +65,18 @@ gulp.task('imagemin', function() {
 
 
 gulp.task('css', function () {
-    return gulp.src(STYLES + "main.css").pipe(
+    return gulp.src(STYLES + "main.css")
+      .pipe(sourcemaps.init())
+      .pipe(
         postcss([
           require('postcss-partial-import')({ /* options */ }),
           autoprefixer({browsers: ['last 1 version']}),
           simplevars,
           require('postcss-nested')({ /* options */ }),
           cssnano
-        ])
-    ).pipe(
+        ]))
+        .pipe(sourcemaps.write('./'))
+        .pipe(
         gulp.dest(PUBLIC_STYLES)
     );
 });

@@ -1,6 +1,14 @@
 $header-height: 125px;
 $header-padding-top: 25px;
 $header-padding-bottom: 30px;
+$header-margin-bottom: 30px;
+
+$highlight-gutter: 30px;
+
+.l-fixed {
+  position: fixed;
+
+}
 
 .l-frame {
   border: 15px solid $white;
@@ -28,6 +36,7 @@ $header-padding-bottom: 30px;
 .l-header {
   height: $header-height;
   padding: $header-padding-top 0 $header-padding-bottom;
+  margin-bottom: $header-margin-bottom;
 
   border-bottom: 3px solid $white;
 
@@ -42,10 +51,19 @@ $header-padding-bottom: 30px;
   }
 
   &__logo-name {
+    display: table;
     height: 100%;
     &__content {
       display: table-cell;
       vertical-align: bottom;
     }
+  }
+}
+
+.l-highlight {
+  padding-bottom: $highlight-gutter;
+
+  &__primary {
+
   }
 }

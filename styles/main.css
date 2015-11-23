@@ -13,13 +13,6 @@
 @import "partials/layout";
 @import "partials/components";
 
-.l-fixed {
-  position: fixed;
-
-}
-
-
-
 #main-content {
   overflow: auto;
   position: absolute;
@@ -27,10 +20,4 @@
   left: 0px;
   right: 0px;
   top: 0px;
-}
-
-
-
-.s-bloody, .c-visor--bloody {
-  background-color: rgba(255,0,0,0.7);
 }
