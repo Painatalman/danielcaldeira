@@ -1,0 +1,24 @@
+/*$color: pink;
+
+.nested {
+  &_nesting {
+    color: $color;
+  }
+}*/
+@import "settings/settings";
+
+@import "partials/reset";
+@import "partials/base";
+@import "partials/grid";
+@import "partials/layout";
+@import "partials/menus";
+@import "partials/components";
+
+#main-content {
+  overflow: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
