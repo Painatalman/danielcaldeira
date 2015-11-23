@@ -1,8 +1,7 @@
-$header-height: 125px;
+$header-height: 130px;
 $header-padding-top: 25px;
 $header-padding-bottom: 30px;
 $header-margin-bottom: 30px;
-
 $highlight-gutter: 30px;
 
 .l-fixed {

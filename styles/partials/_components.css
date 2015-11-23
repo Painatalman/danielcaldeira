@@ -14,11 +14,6 @@ $visor-width: 15px;
 }
 
 .c-header {
-  &__logo {
-    width: 75px;
-    height: 75px;
-    height: auto;
-  }
   &__logo-name {
     height: 100%;
     &__content {
