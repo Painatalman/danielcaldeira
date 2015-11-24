@@ -44,9 +44,9 @@ $highlight-gutter: 30px;
   }
 
   &__logo {
-    width: 75px;
+    /*width: 75px;
     height: 75px;
-    height: auto;
+    height: auto;*/
   }
 
   &__logo-name {

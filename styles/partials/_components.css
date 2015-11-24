@@ -24,7 +24,7 @@ $visor-width: 15px;
   }
 }
 
-c-highlight__cover {
+.c-highlight__cover {
   display: block;
   position: absolute;
   top: 0;
