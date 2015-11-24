@@ -59,6 +59,10 @@ $highlight-gutter: 30px;
   }
 }
 
+.l-main-header {
+  font-size: $font-size-large;
+}
+
 .l-highlight {
   margin-bottom: $highlight-gutter;
   position: relative;

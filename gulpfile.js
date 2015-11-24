@@ -3,6 +3,7 @@
 // gulp and plugins
 var
   gulp = require('gulp'),
+  plumber = require('gulp-plumber'), // do not stop watch on error
   gutil = require('gulp-util'), // logging
   notify = require('gulp-notify'), // workspace notifications
   postcss = require('gulp-postcss'),
@@ -66,6 +67,7 @@ gulp.task('imagemin', function() {
 
 gulp.task('css', function () {
     return gulp.src(STYLES + "main.css")
+      .pipe(plumber())
       .pipe(sourcemaps.init())
       .pipe(
         postcss([

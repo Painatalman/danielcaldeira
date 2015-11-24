@@ -1,10 +1,20 @@
 {
-  "name": "node-js-getting-started",
+  "name": "dangomcald-project",
   "version": "0.1.5",
-  "description": "A sample Node.js app using Express 4",
+  "description": "A portfolio for Daniel Caldeira, designer. Package type http://browsenpm.org/package.json",
+  "author": "Carlos Batman <maiquedi@gmail.com>",
+  "contributors": [
+    {
+      "name": "Daniel Caldeira",
+      "email": "dangomcald@gmail.com"
+    }
+  ],
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo testing",
+    "predeploy": "echo im about to deploy",
+    "postdeploy": "echo ive deployed"
   },
   "dependencies": {
     "ejs": "2.3.3",
@@ -17,12 +27,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://git.heroku.com/dangomcald.git"
+  },
+  "bugs": {
+    "url": "https://git.heroku.com/dangomcald.git/issues"
   },
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "web design",
+    "design"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -33,6 +48,7 @@
     "gulp": "3.9.0",
     "gulp-duration": "0.0.0",
     "gulp-notify": "2.2.0",
+    "gulp-plumber": "1.0.1",
     "gulp-postcss": "6.0.1",
     "gulp-sourcemaps": "1.6.0",
     "gulp-util": "3.0.7",
