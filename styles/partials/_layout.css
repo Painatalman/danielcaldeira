@@ -60,9 +60,12 @@ $highlight-gutter: 30px;
 }
 
 .l-highlight {
-  padding-bottom: $highlight-gutter;
+  margin-bottom: $highlight-gutter;
+  position: relative;
 
   &__primary {
 
   }
+
+
 }
