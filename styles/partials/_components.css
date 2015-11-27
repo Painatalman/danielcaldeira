@@ -11,6 +11,9 @@ $visor-width: 15px;
     width: 100%;
     height: auto;
   }
+  &__primary {
+    min-height: 320px;
+  }
 }
 
 

@@ -2,7 +2,13 @@ $header-height: 130px;
 $header-padding-top: 25px;
 $header-padding-bottom: 30px;
 $header-margin-bottom: 30px;
+
+$footer-padding-top: 30px;
+$footer-padding-bottom: 45px;
+
 $highlight-gutter: 30px;
+
+$border-default: 3px solid $white;
 
 .l-fixed {
   position: fixed;
@@ -31,13 +37,12 @@ $highlight-gutter: 30px;
 
 }
 
-
 .l-header {
   height: $header-height;
   padding: $header-padding-top 0 $header-padding-bottom;
   margin-bottom: $header-margin-bottom;
 
-  border-bottom: 3px solid $white;
+  border-bottom: $border-default;
 
   &__col, &__row {
     height: 100%;
@@ -52,6 +57,8 @@ $highlight-gutter: 30px;
   &__logo-name {
     display: table;
     height: 100%;
+    font-size: $font-size-header-logo;
+
     &__content {
       display: table-cell;
       vertical-align: bottom;
@@ -60,7 +67,7 @@ $highlight-gutter: 30px;
 }
 
 .l-main-header {
-  font-size: $font-size-large;
+  font-size: $font-size-header;
 }
 
 .l-highlight {
@@ -72,4 +79,16 @@ $highlight-gutter: 30px;
   }
 
 
+}
+
+.l-footer {
+  padding-top: $footer-padding-top;
+  padding-bottom: $footer-padding-bottom;
+
+  font-size: $font-size-smaller;
+
+}
+
+.l-main-footer {
+  border-top: $border-default;
 }

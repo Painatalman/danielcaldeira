@@ -4,21 +4,21 @@
   font-size: 18px;
 
   &__item {
-    float: right;
+    /* float: right; */
     text-transform: uppercase;
   }
 }
 
 .c-header__menu {
+  text-align: center;
 
   &--languages {
     .menu-list__item.has-separator::after {
       content:"|";
       position: absolute;
-      right: -25%;
+      right: -5%;
     }
   }
-
   &--pages {
     padding-top: 30px;
   }
