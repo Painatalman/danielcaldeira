@@ -23,18 +23,11 @@
           </div>
         </div>
         <div class="row">
+           <% for (var i=0; i<6; i++) { %>
           <div class="col-xs-12 col-sm-6">
             <% include ../partials/headline.ejs %>
           </div>
-          <div class="col-xs-12 col-sm-6">
-            <% include ../partials/headline.ejs %>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <% include ../partials/headline.ejs %>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <% include ../partials/headline.ejs %>
-          </div>
+          <% } %>
         </div>
         <% include ../partials/footer.ejs %>
       </div>
