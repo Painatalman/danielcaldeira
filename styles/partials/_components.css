@@ -33,6 +33,8 @@ $visor-width: 15px;
   top: 0;
   left: 0; right: 0; bottom: 0;
 
+  border: 10px solid $white;
+
   background: rgba(0,0,0, 0.9 );
   color: $white;
   text-align: center;
