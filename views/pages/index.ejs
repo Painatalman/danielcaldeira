@@ -16,7 +16,7 @@
                   <h2 class="c-highlight__cover__title">Title</h2>
                   <h4 class="c-highlight__cover__subtitle">Subtitle</h4>
                   <hr class="c-highlight__cover__line">
-                  <h5 class="c-highlight__cover__category">Subtitle</h4>
+                  <h5 class="c-highlight__cover__category">Subtitle</h5>
                 </div>
               </div>
               <img class="c-highlight__image" src="/pictures/headlines/imagem_highlight_primary.jpg" alt="" />
@@ -24,7 +24,12 @@
           </div>
         </div>
         <div class="row">
-           <% for (var i=0; i<4; i++) { %>
+          <% var dataImage = "/pictures/headlines/imagem_ideias_empalco.jpg" %>
+          <div class="col-xs-12 col-sm-6 js-headline">
+            <% include ../partials/headline.ejs %>
+          </div>
+          <% dataImage = undefined %>
+           <% for (var i=0; i<3; i++) { %>
           <div class="col-xs-12 col-sm-6 js-headline">
             <% include ../partials/headline.ejs %>
           </div>
