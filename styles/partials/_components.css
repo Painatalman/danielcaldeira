@@ -49,6 +49,8 @@ $visor-width: 15px;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
+
+    width: 70%;
   }
 
   &__title {
@@ -68,5 +70,9 @@ $visor-width: 15px;
 
   &__line {
     margin: $font-size-largest 0;
+  }
+
+  &__category {
+    font-size: $font-size-small;
   }
 }
