@@ -19,7 +19,9 @@ var
   duration = require('gulp-duration'),
   source = require('vinyl-source-stream'), // transform browserify stream into something that can be "comsumed" by gulp utilities,
   browserify = require('browserify'),
-  watchify = require('watchify');
+  watchify = require('watchify'),
+  webpack = require("webpack"),
+  webpackConfig = require("./webpack.config.js");
 
 // paths
 var BASE_TEMPLATE = "./",
@@ -30,12 +32,12 @@ var BASE_TEMPLATE = "./",
   STYLES = "styles/",
   PUBLIC_STYLES = PUBLIC + "styles/",
   SCRIPTS = "scripts/",
-  SCRIPTS_MIN = SCRIPTS + "min/",
-  SCRIPTS_VENDOR = SCRIPTS + "vendor/",
-  SCRIPTS_DEPS = SCRIPTS + "dependencies/",
-  SCRIPTS_HELPERS = SCRIPTS + "helpers/",
-  SCRIPTS_BUNDLED = SCRIPTS + "bundled/",
-  SCRIPTS_BROWSERIFY_APP = SCRIPTS + "greetApp.js",
+  // SCRIPTS_MIN = SCRIPTS + "min/",
+  // SCRIPTS_VENDOR = SCRIPTS + "vendor/",
+  // SCRIPTS_DEPS = SCRIPTS + "dependencies/",
+  // SCRIPTS_HELPERS = SCRIPTS + "helpers/",
+  // SCRIPTS_BUNDLED = SCRIPTS + "bundled/",
+  // SCRIPTS_BROWSERIFY_APP = SCRIPTS + "greetApp.js",
   DOCS = BASE_TEMPLATE + "_docs/";
 
 
@@ -63,7 +65,31 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest(IMAGES));
 });
 
+gulp.task("webpack:build", function(callback) {
+	// modify some webpack config options
+	var myConfig = Object.create(webpackConfig);
 
+  //https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
+	// myConfig.plugins = myConfig.plugins.concat(
+	// 	new webpack.DefinePlugin({
+	// 		"process.env": {
+	// 			// This has effect on the react lib size
+	// 			"NODE_ENV": JSON.stringify("production")
+	// 		}
+	// 	}),
+	// 	new webpack.optimize.DedupePlugin(),
+	// 	new webpack.optimize.UglifyJsPlugin()
+	// );
+
+	// run webpack
+	webpack(myConfig, function(err, stats) {
+		if(err) throw new gutil.PluginError("webpack:build", err);
+		gutil.log("[webpack:build]", stats.toString({
+			colors: true
+		}));
+		callback();
+	});
+});
 
 gulp.task('css', function () {
     return gulp.src(STYLES + "main.css")
@@ -183,6 +209,7 @@ gulp.task('watchBrowserify', function() {
 // Keep an eye on changes...
 gulp.task('watch', function() {
   gulp.watch(STYLES + '**/*.+(css)', ['css']);
+  gulp.watch([SCRIPTS + '**/*.jsx', SCRIPTS+"*.js"], ['webpack:build']);
   // gulp.watch([SCRIPTS + '**/*.js', "!"+SCRIPTS_MIN+"**/*.js"], ['scripts']);
   // gulp.watch([SCRIPTS + '**/*.js', "!"+SCRIPTS_MIN+"**/*.js"], ['watchBrowserify']);
   // gulp.watch([IMAGES + '*'], ['imagemin']);

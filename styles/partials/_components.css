@@ -33,7 +33,7 @@ $visor-width: 15px;
   top: 0;
   left: 0; right: 0; bottom: 0;
 
-  background: rgba(0,0,0, 0.95);
+  background: rgba(0,0,0, 0.9 );
   color: $white;
   text-align: center;
   opacity:0;
@@ -52,13 +52,19 @@ $visor-width: 15px;
   &__title {
     font-size: $font-size-largest;
     font-weight: bold;
-  }
-
-  &__line {
-    margin: $font-size-largest 0;
+    margin-bottom: 20px;
   }
 
   &__subtitle {
     font-size: $font-size-larger;
+    text-transform: uppercase;
+  }
+
+  &__title, &__subtitle {
+    text-transform: uppercase;
+  }
+
+  &__line {
+    margin: $font-size-largest 0;
   }
 }
