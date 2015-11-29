@@ -9,7 +9,8 @@
       <div class="container">
         <% include ../partials/header.ejs %>
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-12 js-headline">
+            <%#
             <div class="l-highlight l-highlight--primary">
               <div class="c-highlight__cover">
                 <div class="c-highlight__cover__content">
@@ -21,17 +22,18 @@
               </div>
               <img class="c-highlight__image" src="/pictures/headlines/imagem_highlight_primary.jpg" alt="" />
             </div>
+            %>
           </div>
         </div>
         <div class="row">
           <% var dataImage = "/pictures/headlines/imagem_ideias_empalco.jpg" %>
           <div class="col-xs-12 col-sm-6 js-headline">
-            <% include ../partials/headline.ejs %>
+            <%# include ../partials/headline.ejs %>
           </div>
           <% dataImage = undefined %>
            <% for (var i=0; i<3; i++) { %>
           <div class="col-xs-12 col-sm-6 js-headline">
-            <% include ../partials/headline.ejs %>
+            <%# include ../partials/headline.ejs %>
           </div>
           <% } %>
         </div>

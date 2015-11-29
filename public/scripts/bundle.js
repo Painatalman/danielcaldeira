@@ -50,17 +50,41 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _headline = __webpack_require__(158);
+	var _reactDom = __webpack_require__(158);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _headline = __webpack_require__(159);
 
 	var _headline2 = _interopRequireDefault(_headline);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var headlineColumns = document.getElementsByClassName("js-headline");
-
-	// for (let i=0; i<headlineColumns.length; i++) {
-	//  React.render(<Headline />, headlineColumns[i]);
-	// }
+	var dataItems = [{
+	  imageUrl: "/pictures/headlines/imagem_highlight_primary.jpg",
+	  type: "primary",
+	  alt: "highlight"
+	}, {
+	  imageUrl: "/pictures/headlines/imagem_ideias_empalco.jpg",
+	  type: "secondary",
+	  alt: "highlight"
+	}, {
+	  imageUrl: "http://lorempixel.com/540/300",
+	  type: "secondary",
+	  alt: "highlight"
+	}, {
+	  imageUrl: "http://lorempixel.com/540/300",
+	  type: "secondary",
+	  alt: "highlight"
+	}, {
+	  imageUrl: "http://lorempixel.com/540/300",
+	  type: "secondary",
+	  alt: "highlight"
+	}];
+	dataItems.forEach(function (item, i) {
+	  _reactDom2.default.render(_react2.default.createElement(_headline2.default, { imageUrl: item.imageUrl, type: item.type, alt: item.alt }), headlineColumns[i]);
+	});
 
 /***/ },
 /* 1 */
@@ -19644,6 +19668,15 @@
 /* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	module.exports = __webpack_require__(3);
+
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -19670,16 +19703,8 @@
 	  function Headline(props) {
 	    _classCallCheck(this, Headline);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Headline).call(this, props));
-
-	    console.log(props);
-	    //if (props.keys({}).length === 0) {
-
-	    _this.props.imageUrl = "http://lorempixel.com/480/200";
-	    _this.props.type = "secondary";
-	    _this.props.alt = "an image";
-	    // }
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Headline).call(this, props));
+	    // console.log(props);
 	  }
 
 	  _createClass(Headline, [{
@@ -19687,7 +19712,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "l-highlight l-highlight--{this.props.type}" },
+	        { className: "l-highlight l-highlight--secondary" },
 	        _react2.default.createElement(
 	          "div",
 	          { className: "c-highlight__cover" },
@@ -19704,7 +19729,12 @@
 	              { className: "c-highlight__cover__subtitle" },
 	              "Subtitle"
 	            ),
-	            _react2.default.createElement("hr", { className: "c-highlight__cover__line" })
+	            _react2.default.createElement("hr", { className: "c-highlight__cover__line" }),
+	            _react2.default.createElement(
+	              "h5",
+	              { className: "c-highlight__cover__category" },
+	              "Category"
+	            )
 	          )
 	        ),
 	        _react2.default.createElement("img", { className: "c-highlight__image", src: this.props.imageUrl, alt: this.props.alt })
