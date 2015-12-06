@@ -1,0 +1,10 @@
+.footer {
+  &__credits {
+
+  }
+  &__credit {
+    &-title {
+      font-weight: bold;
+    }
+  }
+}
