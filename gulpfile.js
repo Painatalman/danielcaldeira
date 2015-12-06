@@ -11,6 +11,7 @@ var
   precss = require('precss'),
   cssnano = require('cssnano'),
   simplevars = require('postcss-simple-vars'),
+  inlineComment = require('postcss-inline-comment'),
   sourcemaps = require('gulp-sourcemaps'),
   // uglify = require('gulp-uglify'),
   // concat = require('gulp-concat'),
@@ -101,6 +102,7 @@ gulp.task('css', function () {
           autoprefixer({browsers: ['last 1 version']}),
           simplevars,
           require('postcss-nested')({ /* options */ }),
+          require('postcss-inline-comment'),
           cssnano
         ]))
         .pipe(sourcemaps.write('./'))

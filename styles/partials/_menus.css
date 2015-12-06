@@ -6,6 +6,13 @@
   &__item {
     /* float: right; */
     text-transform: uppercase;
+
+    &:hover {
+      color: $red;
+      &::after {
+        color: $black;
+      }
+    }
   }
 }
 
