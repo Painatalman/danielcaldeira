@@ -12,6 +12,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "gulp": "gulp",
+    "scripts": "webpack",
     "test": "echo testing",
     "predeploy": "echo im about to deploy",
     "postdeploy": "echo ive deployed"

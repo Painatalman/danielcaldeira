@@ -1,5 +1,5 @@
 import React from 'react';
-import Headline from './headline.jsx';
+import Headline from './headline.js';
 
 
 class HeadlinePage extends React.Component {

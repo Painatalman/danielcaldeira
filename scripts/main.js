@@ -1,35 +1,50 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Headline from "./components/headline.jsx";
 
-let headlineColumns = document.getElementsByClassName("js-headline");
+import HomePage from "./components/pages/home";
+
+let mainData = {
+  imageUrl: "/pictures/headlines/imagem_highlight_primary.jpg",
+  type: "primary",
+  alt: "highlight",
+  title: "Principal",
+  subtitle: "Subtítulo"
+};
+
 let dataItems = [
-  {
-    imageUrl: "/pictures/headlines/imagem_highlight_primary.jpg",
-    type: "primary",
-    alt: "highlight"
-  },
   {
     imageUrl: "/pictures/headlines/imagem_ideias_empalco.jpg",
     type: "secondary",
-    alt: "highlight"
+    alt: "highlight",
+    title: "Ideias em Palco",
+    subtitle: "Subtítulo",
+    category: "Category"
   },
   {
-    imageUrl: "http://lorempixel.com/540/300",
+    imageUrl: "http://placehold.it/540x300",
     type: "secondary",
-    alt: "highlight"
+    alt: "highlight",
+    title: "Title",
+    subtitle: "Subtítulo",
+    category: "Category"
   },
   {
-    imageUrl: "http://lorempixel.com/540/300",
+    imageUrl: "http://placehold.it/540x300",
     type: "secondary",
-    alt: "highlight"
+    alt: "highlight",
+    title: "Title",
+    subtitle: "Subtítulo",
+    category: "Category"
   },
   {
-    imageUrl: "http://lorempixel.com/540/300",
+    imageUrl: "http://placehold.it/540x300",
     type: "secondary",
-    alt: "highlight"
+    alt: "highlight",
+    title: "Title",
+    subtitle: "Subtítulo",
+    category: "Category"
   },
 ];
-dataItems.forEach((item, i) => {
- ReactDOM.render(<Headline imageUrl={item.imageUrl} type={item.type} alt={item.alt} />, headlineColumns[i]);
-})
+
+ReactDOM.render(
+  <HomePage mainData={mainData} dataItems={dataItems}></HomePage>  , document.getElementById('main-app'));
