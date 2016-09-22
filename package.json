@@ -19,6 +19,7 @@
     "postdeploy": "echo ive deployed"
   },
   "dependencies": {
+    "axios": "^0.14.0",
     "ejs": "2.3.3",
     "express": "4.13.3",
     "mongo": "0.1.0",
@@ -49,6 +50,8 @@
     "babel": "6.1.18",
     "babel-core": "6.2.1",
     "babel-loader": "6.2.0",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "6.1.18",
     "babel-preset-react": "6.1.18",
     "browser-sync": "2.10.0",
@@ -61,6 +64,8 @@
     "gulp-postcss": "6.0.1",
     "gulp-sourcemaps": "1.6.0",
     "gulp-util": "3.0.7",
+    "mobx": "^2.5.1",
+    "mobx-react": "^3.5.6",
     "postcss": "5.0.12",
     "postcss-inline-comment": "2.0.0",
     "postcss-nested": "1.0.0",

@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 
 import HomePage from "./components/pages/home";
 
+import ProjectStore from "./stores/projectStore";
+import Project from "./models/Project";
+
 let mainData = {
   imageUrl: "/pictures/headlines/imagem_highlight_primary.jpg",
   type: "primary",
@@ -10,6 +13,9 @@ let mainData = {
   title: "Principal",
   subtitle: "Subtítulo"
 };
+
+window.Project = Project;
+window.projectStore = new ProjectStore();
 
 let dataItems = [
   {
@@ -46,5 +52,7 @@ let dataItems = [
   },
 ];
 
+dataItems.forEach((item) => projectStore.addProject(item));
+
 ReactDOM.render(
-  <HomePage mainData={mainData} dataItems={dataItems}></HomePage>  , document.getElementById('main-app'));
+  <HomePage mainData={mainData} store={projectStore}></HomePage>  , document.getElementById('main-app'));
