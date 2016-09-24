@@ -18,7 +18,15 @@ export default class ProjectStore {
           headers: {'x-apikey': '57e1b85f2afc881a06f26056'}
         })
         .then((response) => {
-          response.data.forEach((newProjectData)=>this.projects.push(newProjectData));
+          response.data.forEach((newProjectData)=>{
+            let imageUrl = newProjectData.imageUrl[0];
+            newProjectData.imageUrl =
+              imageUrl
+              ? `https://desdevportfolio-d3f0.restdb.io/media/${imageUrl}`
+              : imageUrl;
+
+            this.projects.push(new Project(newProjectData));
+          })
         })
         .catch(function (error) {
           console.log(error);

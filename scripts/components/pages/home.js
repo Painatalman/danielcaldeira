@@ -1,5 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import DevTools from 'mobx-react-devtools';
 
 import Header from '../header.js';
 import Footer from '../footer.js';
@@ -10,12 +11,12 @@ const HomePage = (props) => (
 <Header></Header>
 <div className="row">
   <div className="col-xs-12">
-    <Highlight type="primary" title={props.mainData.title} subtitle={props.mainData.subtitle} category={props.mainData.category} imageUrl={props.mainData.imageUrl} ></Highlight>
+    <Highlight type="primary" title={props.route.mainData.title} subtitle={props.route.mainData.subtitle} category={props.route.mainData.category} imageUrl={props.route.mainData.imageUrl} ></Highlight>
   </div>
 </div>
 <div className="row">
   {
-    props.store.projects.map( (item) => {
+    props.route.store.projects.map( (item) => {
     return (
       <div className="col-xs-12 col-sm-6">
         <Highlight type={item.type} imageUrl={item.imageUrl} subtitle={item.subtitle} alt={item.alt} title={item.title} category={item.category} />
@@ -25,6 +26,7 @@ const HomePage = (props) => (
   }
 </div>
 <Footer></Footer>
+<DevTools />
 </div>
 );
 

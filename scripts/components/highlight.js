@@ -1,24 +1,36 @@
 import React from 'react';
 
-export default class Highlight extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render () {return <div className="l-highlight l-highlight--{this.props.type}">
+ const Highlight = (props) =>  {
+   return <div className="l-highlight l-highlight--{props.type}">
     <div className="c-highlight__cover">
       <div className="c-highlight__cover__content">
         <h2 className="c-highlight__cover__title">
-          {this.props.title}
+          {props.title}
         </h2>
         <h4 className="c-highlight__cover__subtitle">
-          {this.props.subtitle}
+          {props.subtitle}
         </h4>
         <hr className="c-highlight__cover__line"></hr>
-        <h5 className="c-highlight__cover__category">{this.props.category}</h5>
+        <h5 className="c-highlight__cover__category">{props.category}</h5>
       </div>
       </div>
-      <img className="c-highlight__image" src={this.props.imageUrl} alt={this.props.alt}></img>
+      <img className="c-highlight__image" src={props.imageUrl} alt={props.alt}></img>
     </div>
-}
-}
+};
+
+Highlight.propTypes = {
+  type: React.PropTypes.oneOf(['primary','secondary']),
+  title: React.PropTypes.string,
+  subtitle: React.PropTypes.string,
+  category: React.PropTypes.string,
+  imageUrl: React.PropTypes.string
+};
+Highlight.defaultProps = {
+  type: 'secondary',
+  title: "Project X",
+  subtitle: "A true mistery",
+  category: "Works",
+  imageUrl: "http://placehold.it/360/240"
+};
+
+export default Highlight;

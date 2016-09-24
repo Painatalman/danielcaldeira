@@ -7,15 +7,28 @@ module.exports = {
     filename: 'bundle.js'
   },
   devtool: 'source-map',
+  eslint: {
+    configFile: './.eslintrc.js'
+  },
   module: {
     loaders: [
       {
-        exclude: /node_modules/,
+        test: /\.js$/,
+        include: [
+          path.resolve(__dirname, 'scripts')
+        ],
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react'],
           plugins: ['transform-decorators-legacy', 'transform-class-properties']
         }
+      },
+      {
+        test: /\.js$/,
+        include: [
+          path.resolve(__dirname, 'scripts')
+        ],
+        loader: 'eslint'
       }
     ]
   }

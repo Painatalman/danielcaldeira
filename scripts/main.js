@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
+
 import HomePage from "./components/pages/home";
 
 import ProjectStore from "./stores/projectStore";
@@ -55,4 +57,9 @@ let dataItems = [
 dataItems.forEach((item) => projectStore.addProject(item));
 
 ReactDOM.render(
-  <HomePage mainData={mainData} store={projectStore}></HomePage>  , document.getElementById('main-app'));
+  <Router>
+    <Route path="/" component={HomePage} mainData={mainData} store={projectStore}></Route>
+  </Router>
+    , document.getElementById('main-app')
+
+);
