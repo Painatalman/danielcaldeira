@@ -1,0 +1,3 @@
+[submodule "scripts/helpers/helpers-js"]
+	path = scripts/helpers/helpers-js
+	url = https://github.com/Painatalman/helpers-js

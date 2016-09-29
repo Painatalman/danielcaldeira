@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var _react = __webpack_require__(1);
 	
@@ -60,55 +60,63 @@
 	
 	var _home2 = _interopRequireDefault(_home);
 	
-	var _projectStore = __webpack_require__(229);
+	var _about = __webpack_require__(229);
+	
+	var _about2 = _interopRequireDefault(_about);
+	
+	var _contacts = __webpack_require__(230);
+	
+	var _contacts2 = _interopRequireDefault(_contacts);
+	
+	var _projectStore = __webpack_require__(231);
 	
 	var _projectStore2 = _interopRequireDefault(_projectStore);
 	
-	var _Project = __webpack_require__(230);
+	var _Project = __webpack_require__(232);
 	
 	var _Project2 = _interopRequireDefault(_Project);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var mainData = {
-	  imageUrl: "/pictures/headlines/imagem_highlight_primary.jpg",
-	  type: "primary",
-	  alt: "highlight",
-	  title: "Principal",
-	  subtitle: "Subtítulo"
+	  imageUrl: '/pictures/headlines/imagem_highlight_primary.jpg',
+	  type: 'primary',
+	  alt: 'highlight',
+	  title: 'Principal',
+	  subtitle: 'Subtítulo'
 	};
 	
 	window.Project = _Project2.default;
 	window.projectStore = new _projectStore2.default();
 	
 	var dataItems = [{
-	  imageUrl: "/pictures/headlines/imagem_ideias_empalco.jpg",
-	  type: "secondary",
-	  alt: "highlight",
-	  title: "Ideias em Palco",
-	  subtitle: "Subtítulo",
-	  category: "Category"
+	  imageUrl: '/pictures/headlines/imagem_ideias_empalco.jpg',
+	  type: 'secondary',
+	  alt: 'highlight',
+	  title: 'Ideias em Palco',
+	  subtitle: 'Subtítulo',
+	  category: 'Category'
 	}, {
-	  imageUrl: "http://placehold.it/540x300",
-	  type: "secondary",
-	  alt: "highlight",
-	  title: "Title",
-	  subtitle: "Subtítulo",
-	  category: "Category"
+	  imageUrl: 'http://placehold.it/540x300',
+	  type: 'secondary',
+	  alt: 'highlight',
+	  title: 'Title',
+	  subtitle: 'Subtítulo',
+	  category: 'Category'
 	}, {
-	  imageUrl: "http://placehold.it/540x300",
-	  type: "secondary",
-	  alt: "highlight",
-	  title: "Title",
-	  subtitle: "Subtítulo",
-	  category: "Category"
+	  imageUrl: 'http://placehold.it/540x300',
+	  type: 'secondary',
+	  alt: 'highlight',
+	  title: 'Title',
+	  subtitle: 'Subtítulo',
+	  category: 'Category'
 	}, {
-	  imageUrl: "http://placehold.it/540x300",
-	  type: "secondary",
-	  alt: "highlight",
-	  title: "Title",
-	  subtitle: "Subtítulo",
-	  category: "Category"
+	  imageUrl: 'http://placehold.it/540x300',
+	  type: 'secondary',
+	  alt: 'highlight',
+	  title: 'Title',
+	  subtitle: 'Subtítulo',
+	  category: 'Category'
 	}];
 	
 	dataItems.forEach(function (item) {
@@ -117,9 +125,15 @@
 	
 	_reactDom2.default.render(_react2.default.createElement(
 	  _reactRouter.Router,
-	  null,
-	  _react2.default.createElement(_reactRouter.Route, { path: "/", component: _home2.default, mainData: mainData, store: projectStore })
+	  { history: _reactRouter.browserHistory },
+	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _home2.default, mainData: mainData, store: projectStore }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _about2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/contacts', component: _contacts2.default })
 	), document.getElementById('main-app'));
+	
+	var konamiCode = __webpack_require__(255)({}, function () {
+	  return alert('----- By: Carlos Batman -----');
+	});
 
 /***/ },
 /* 1 */
@@ -28242,7 +28256,7 @@
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -28252,77 +28266,79 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouter = __webpack_require__(159);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Header = function Header() {
 	  return _react2.default.createElement(
-	    "header",
-	    { className: "c-header l-header l-main-header" },
+	    'header',
+	    { className: 'c-header l-header l-main-header' },
 	    _react2.default.createElement(
-	      "div",
-	      { className: "row l-header__row" },
+	      'div',
+	      { className: 'row l-header__row' },
 	      _react2.default.createElement(
-	        "div",
-	        { className: "col-xs-1 l-header__col" },
-	        _react2.default.createElement("img", { src: "/pictures/logo_header.png", alt: "", className: "c-header__logo" })
+	        'div',
+	        { className: 'col-xs-1 l-header__col' },
+	        _react2.default.createElement('img', { src: '/pictures/logo_header.png', alt: '', className: 'c-header__logo' })
 	      ),
 	      _react2.default.createElement(
-	        "div",
-	        { className: "col-xs-3 l-header__col" },
+	        'div',
+	        { className: 'col-xs-3 l-header__col' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "l-header__logo-name" },
+	          'div',
+	          { className: 'l-header__logo-name' },
 	          _react2.default.createElement(
-	            "p",
-	            { className: "l-header__logo-name__content" },
+	            'p',
+	            { className: 'l-header__logo-name__content' },
 	            _react2.default.createElement(
-	              "b",
+	              'b',
 	              null,
-	              "Daniel Caldeira"
+	              'Daniel Caldeira'
 	            ),
-	            _react2.default.createElement("br", null),
+	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
-	              "span",
+	              'span',
 	              null,
-	              "designer gráfico"
+	              'designer gráfico'
 	            )
 	          )
 	        )
 	      ),
 	      _react2.default.createElement(
-	        "div",
-	        { className: "col-xs-6 col-xs-offset-2 l-header__col pull-right" },
+	        'div',
+	        { className: 'col-xs-6 col-xs-offset-2 l-header__col pull-right' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "l-header__menu" },
+	          'div',
+	          { className: 'l-header__menu' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "row l-header__row c-header__menu c-header__menu--languages" },
+	            'div',
+	            { className: 'row l-header__row c-header__menu c-header__menu--languages' },
 	            _react2.default.createElement(
-	              "div",
-	              { className: "col-xs-4 col-xs-offset-8 l-header__col" },
+	              'div',
+	              { className: 'col-xs-4 col-xs-offset-8 l-header__col' },
 	              _react2.default.createElement(
-	                "nav",
-	                { className: "c-header__menu" },
+	                'nav',
+	                { className: 'c-header__menu' },
 	                _react2.default.createElement(
-	                  "div",
-	                  { className: "c-header__menu-list menu-list row" },
+	                  'div',
+	                  { className: 'c-header__menu-list menu-list row' },
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "col-xs-6" },
+	                    'div',
+	                    { className: 'col-xs-6' },
 	                    _react2.default.createElement(
-	                      "a",
-	                      { className: "c-header__menu-item menu-list__item has-separator" },
-	                      "PT"
+	                      'a',
+	                      { className: 'c-header__menu-item menu-list__item has-separator' },
+	                      'PT'
 	                    )
 	                  ),
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "col-xs-6" },
+	                    'div',
+	                    { className: 'col-xs-6' },
 	                    _react2.default.createElement(
-	                      "a",
-	                      { className: "c-header__menu-item menu-list__item" },
-	                      "EN"
+	                      'a',
+	                      { className: 'c-header__menu-item menu-list__item' },
+	                      'EN'
 	                    )
 	                  )
 	                )
@@ -28330,36 +28346,36 @@
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "row l-header__row c-header__menu c-header__menu--pages" },
+	            'div',
+	            { className: 'row l-header__row c-header__menu c-header__menu--pages' },
 	            _react2.default.createElement(
-	              "nav",
-	              { className: "c-header__menu" },
+	              'nav',
+	              { className: 'c-header__menu' },
 	              _react2.default.createElement(
-	                "div",
-	                { className: "col-xs-4" },
+	                'div',
+	                { className: 'col-xs-4' },
 	                _react2.default.createElement(
-	                  "a",
-	                  { className: "c-header__menu-item menu-list__item" },
-	                  "Projetos"
+	                  _reactRouter.Link,
+	                  { to: '/', className: 'c-header__menu-item menu-list__item' },
+	                  'Projetos'
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "div",
-	                { className: "col-xs-4" },
+	                'div',
+	                { className: 'col-xs-4' },
 	                _react2.default.createElement(
-	                  "a",
-	                  { className: "c-header__menu-item menu-list__item" },
-	                  "Sobre Mim"
+	                  _reactRouter.Link,
+	                  { to: '/about', className: 'c-header__menu-item menu-list__item' },
+	                  'Sobre Mim'
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "div",
-	                { className: "col-xs-4" },
+	                'div',
+	                { className: 'col-xs-4' },
 	                _react2.default.createElement(
-	                  "a",
-	                  { className: "c-header__menu-item menu-list__item" },
-	                  "Contactos"
+	                  _reactRouter.Link,
+	                  { to: '/contacts', className: 'c-header__menu-item menu-list__item' },
+	                  'Contactos'
 	                )
 	              )
 	            )
@@ -28433,7 +28449,7 @@
 /* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -28447,33 +28463,33 @@
 	
 	var Highlight = function Highlight(props) {
 	  return _react2.default.createElement(
-	    "div",
-	    { className: "l-highlight l-highlight--{props.type}" },
+	    'div',
+	    { className: 'l-highlight l-highlight--{props.type}' },
 	    _react2.default.createElement(
-	      "div",
-	      { className: "c-highlight__cover" },
+	      'div',
+	      { className: 'c-highlight__cover' },
 	      _react2.default.createElement(
-	        "div",
-	        { className: "c-highlight__cover__content" },
+	        'div',
+	        { className: 'c-highlight__cover__content' },
 	        _react2.default.createElement(
-	          "h2",
-	          { className: "c-highlight__cover__title" },
+	          'h2',
+	          { className: 'c-highlight__cover__title' },
 	          props.title
 	        ),
 	        _react2.default.createElement(
-	          "h4",
-	          { className: "c-highlight__cover__subtitle" },
+	          'h4',
+	          { className: 'c-highlight__cover__subtitle' },
 	          props.subtitle
 	        ),
-	        _react2.default.createElement("hr", { className: "c-highlight__cover__line" }),
+	        _react2.default.createElement('hr', { className: 'c-highlight__cover__line' }),
 	        _react2.default.createElement(
-	          "h5",
-	          { className: "c-highlight__cover__category" },
+	          'h5',
+	          { className: 'c-highlight__cover__category' },
 	          props.category
 	        )
 	      )
 	    ),
-	    _react2.default.createElement("img", { className: "c-highlight__image", src: props.imageUrl, alt: props.alt })
+	    _react2.default.createElement('img', { className: 'c-highlight__image', src: props.imageUrl, alt: props.alt })
 	  );
 	};
 	
@@ -28486,16 +28502,145 @@
 	};
 	Highlight.defaultProps = {
 	  type: 'secondary',
-	  title: "Project X",
-	  subtitle: "A true mistery",
-	  category: "Works",
-	  imageUrl: "http://placehold.it/360/240"
+	  title: 'Project X',
+	  subtitle: 'A true mistery',
+	  category: 'Works',
+	  imageUrl: 'http://placehold.it/360/240'
 	};
 	
 	exports.default = Highlight;
 
 /***/ },
 /* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _header = __webpack_require__(226);
+	
+	var _header2 = _interopRequireDefault(_header);
+	
+	var _footer = __webpack_require__(227);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var AboutPage = function AboutPage(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(_header2.default, null),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'row' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-xs-12' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'About Me'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'row' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-sm-4' },
+	        _react2.default.createElement('img', { src: 'http://placekitten.com/300/300' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-sm-4' },
+	        'Coming soon...'
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-sm-4' },
+	        'Coming soon...'
+	      )
+	    ),
+	    _react2.default.createElement(_footer2.default, null)
+	  );
+	};
+	
+	exports.default = AboutPage;
+
+/***/ },
+/* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _header = __webpack_require__(226);
+	
+	var _header2 = _interopRequireDefault(_header);
+	
+	var _footer = __webpack_require__(227);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var ContactsPage = function ContactsPage(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(_header2.default, null),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'row' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-xs-12' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Contacts'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'row' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-sm-6' },
+	        _react2.default.createElement('img', { src: 'http://placekitten.com/300/300' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-sm-6' },
+	        'Coming soon...'
+	      )
+	    ),
+	    _react2.default.createElement(_footer2.default, null)
+	  );
+	};
+	
+	exports.default = ContactsPage;
+
+/***/ },
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28511,11 +28656,11 @@
 	
 	var _mobx = __webpack_require__(224);
 	
-	var _Project = __webpack_require__(230);
+	var _Project = __webpack_require__(232);
 	
 	var _Project2 = _interopRequireDefault(_Project);
 	
-	var _axios = __webpack_require__(231);
+	var _axios = __webpack_require__(233);
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
@@ -28613,7 +28758,7 @@
 	exports.default = ProjectStore;
 
 /***/ },
-/* 230 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28692,20 +28837,20 @@
 	exports.default = Project;
 
 /***/ },
-/* 231 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(232);
+	module.exports = __webpack_require__(234);
 
 /***/ },
-/* 232 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
-	var bind = __webpack_require__(234);
-	var Axios = __webpack_require__(235);
+	var utils = __webpack_require__(235);
+	var bind = __webpack_require__(236);
+	var Axios = __webpack_require__(237);
 	
 	/**
 	 * Create an instance of Axios
@@ -28741,7 +28886,7 @@
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(252);
+	axios.spread = __webpack_require__(254);
 	
 	module.exports = axios;
 	
@@ -28750,12 +28895,12 @@
 
 
 /***/ },
-/* 233 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var bind = __webpack_require__(234);
+	var bind = __webpack_require__(236);
 	
 	/*global toString:true*/
 	
@@ -29055,7 +29200,7 @@
 
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29072,17 +29217,17 @@
 
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var defaults = __webpack_require__(236);
-	var utils = __webpack_require__(233);
-	var InterceptorManager = __webpack_require__(238);
-	var dispatchRequest = __webpack_require__(239);
-	var isAbsoluteURL = __webpack_require__(250);
-	var combineURLs = __webpack_require__(251);
+	var defaults = __webpack_require__(238);
+	var utils = __webpack_require__(235);
+	var InterceptorManager = __webpack_require__(240);
+	var dispatchRequest = __webpack_require__(241);
+	var isAbsoluteURL = __webpack_require__(252);
+	var combineURLs = __webpack_require__(253);
 	
 	/**
 	 * Create a new instance of Axios
@@ -29163,13 +29308,13 @@
 
 
 /***/ },
-/* 236 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
-	var normalizeHeaderName = __webpack_require__(237);
+	var utils = __webpack_require__(235);
+	var normalizeHeaderName = __webpack_require__(239);
 	
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -29241,12 +29386,12 @@
 
 
 /***/ },
-/* 237 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
+	var utils = __webpack_require__(235);
 	
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -29259,12 +29404,12 @@
 
 
 /***/ },
-/* 238 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
+	var utils = __webpack_require__(235);
 	
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -29317,13 +29462,13 @@
 
 
 /***/ },
-/* 239 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(233);
-	var transformData = __webpack_require__(240);
+	var utils = __webpack_require__(235);
+	var transformData = __webpack_require__(242);
 	
 	/**
 	 * Dispatch a request to the server using whichever adapter
@@ -29364,10 +29509,10 @@
 	    adapter = config.adapter;
 	  } else if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(241);
+	    adapter = __webpack_require__(243);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(241);
+	    adapter = __webpack_require__(243);
 	  }
 	
 	  return Promise.resolve(config)
@@ -29399,12 +29544,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 240 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
+	var utils = __webpack_require__(235);
 	
 	/**
 	 * Transform the data for a request or a response
@@ -29425,18 +29570,18 @@
 
 
 /***/ },
-/* 241 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(233);
-	var settle = __webpack_require__(242);
-	var buildURL = __webpack_require__(245);
-	var parseHeaders = __webpack_require__(246);
-	var isURLSameOrigin = __webpack_require__(247);
-	var createError = __webpack_require__(243);
-	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(248);
+	var utils = __webpack_require__(235);
+	var settle = __webpack_require__(244);
+	var buildURL = __webpack_require__(247);
+	var parseHeaders = __webpack_require__(248);
+	var isURLSameOrigin = __webpack_require__(249);
+	var createError = __webpack_require__(245);
+	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(250);
 	
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -29530,7 +29675,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(249);
+	      var cookies = __webpack_require__(251);
 	
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -29594,12 +29739,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 242 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var createError = __webpack_require__(243);
+	var createError = __webpack_require__(245);
 	
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -29625,12 +29770,12 @@
 
 
 /***/ },
-/* 243 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var enhanceError = __webpack_require__(244);
+	var enhanceError = __webpack_require__(246);
 	
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -29648,7 +29793,7 @@
 
 
 /***/ },
-/* 244 */
+/* 246 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29673,12 +29818,12 @@
 
 
 /***/ },
-/* 245 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
+	var utils = __webpack_require__(235);
 	
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -29747,12 +29892,12 @@
 
 
 /***/ },
-/* 246 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
+	var utils = __webpack_require__(235);
 	
 	/**
 	 * Parse headers into an object
@@ -29790,12 +29935,12 @@
 
 
 /***/ },
-/* 247 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
+	var utils = __webpack_require__(235);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -29864,7 +30009,7 @@
 
 
 /***/ },
-/* 248 */
+/* 250 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29906,12 +30051,12 @@
 
 
 /***/ },
-/* 249 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var utils = __webpack_require__(233);
+	var utils = __webpack_require__(235);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -29965,7 +30110,7 @@
 
 
 /***/ },
-/* 250 */
+/* 252 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29985,7 +30130,7 @@
 
 
 /***/ },
-/* 251 */
+/* 253 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30003,7 +30148,7 @@
 
 
 /***/ },
-/* 252 */
+/* 254 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30034,6 +30179,118 @@
 	  };
 	};
 
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	
+	(function (root, factory) {
+	  if (true) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') {
+	    // Node, CommonJS-like
+	    module.exports = factory();
+	  } else {
+	    // Browser globals (root is window)
+	    root.kCode = factory();
+	  }
+	})(undefined, function () {
+	  /**
+	   * An input reader with callback based on a specific code that was made popular by some kind of videogame company
+	   * @param  {[type]}   options  [description]
+	   * @param  {Function} callback [description]
+	   * @param  {[type]}   params   [description]
+	   * @return {[type]}            [description]
+	  */
+	  function kCode(options, callback, params) {
+	    // TODO: code option must have at least 2 characters
+	    var options = options || {};
+	
+	    function disableKCode() {
+	      window.document.removeEventListener('keyup', kCodePress, false);
+	      pressedKeys = [];
+	    }
+	
+	    var TIMER = options.timer || 1000,
+	        //1s
+	    COMBINATION = options.combination || [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+	        //e.which, the keycode
+	    DEBUG = options.debug || false,
+	        CALLBACK = callback || function defaultCallback() {
+	      alert('porn');
+	    },
+	        PARAMS = params || {},
+	        DISABLE = options.disable || false;
+	
+	    var interval,
+	        pressedKeys = [],
+	        kCodePress = function kCodePressEvent(e) {
+	      if (interval) {
+	        // clear timeout on key pressed
+	        clearTimeout(interval);
+	      }
+	
+	      var curPos = pressedKeys.length,
+	          pressedKeyCode = e.which;
+	
+	      if (DEBUG) {
+	        console.log('You pressed', pressedKeyCode);
+	      }
+	      if (pressedKeyCode === COMBINATION[curPos]) {
+	        pressedKeys.push(pressedKeyCode);
+	        if (DEBUG) {
+	          console.log(pressedKeys);
+	        }
+	        if (curPos + 1 === COMBINATION.length) {
+	          // then it was enabled
+	          if (DEBUG) {
+	            console.log('enabled!');
+	          }
+	          CALLBACK(PARAMS);
+	
+	          // reset pressed keys
+	          pressedKeys = [];
+	        } else {
+	          // right key, but code still incomplete
+	          interval = setTimeout(function () {
+	            pressedKeys = [];
+	          }, TIMER);
+	        }
+	      } else {
+	        // wrong key, biatch!
+	        if (DEBUG) {
+	          console.log('wrong key, reset!\nBut is it the first one?');
+	        }
+	
+	        // still, you may be on to something if, for example, the 3rd character pressed is actually the same as the second right one... you just need to ignore the first pressed key
+	        // that will be done... later!
+	        pressedKeys = [];
+	        // if (pressedKeyCode === COMBINATION[0]) {
+	        //       pressedKeys.push(pressedKeyCode);
+	        //       interval = setTimeout(function(){ pressedKeys = [];}, TIMER);
+	        // }
+	      }
+	    };
+	
+	    if (DEBUG) {
+	      console.log(TIMER, COMBINATION, DEBUG, CALLBACK, PARAMS);
+	    }
+	
+	    if (DISABLE) {
+	      disableKCode();
+	      return;
+	    }
+	
+	    window.document.addEventListener('keyup', kCodePress, false);
+	  }
+	
+	  return kCode;
+	});
 
 /***/ }
 /******/ ]);

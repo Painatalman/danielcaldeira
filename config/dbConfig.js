@@ -1,5 +1,5 @@
 module.exports = {
-	local: 'mongodb://localhost/despesas',
+	apiKey: '9d4eb5fbfc93a4c4ed2508c395b0c1b36ff78',
   remote: 'mongodb://Rambovskii:Ramborambo999@ds031631.mongolab.com:31631/despesas',
 	init: function(isRemote){
 		var mongoose = require('mongoose');

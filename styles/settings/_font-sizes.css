@@ -1,9 +1,11 @@
-$font-size-smaller: 14px;
-$font-size-small: 16px;
-$font-size-medium: 18px;
-$font-size-large: 20px;
-$font-size-larger: 26px;
-$font-size-largest: 40px;
+$font-size-base: 16px;
+
+$font-size-smaller: calc(strip(14px) / strip(16px) * 1rem);
+$font-size-small: $font-size-base;
+$font-size-medium: calc(strip(18px) / strip(16px) * 1rem);
+$font-size-large: calc(strip(20px) / strip(16px) * 1rem);
+$font-size-larger: calc(strip(26px) / strip(16px) * 1rem);
+$font-size-largest: calc(strip(40px) / strip(16px) * 1rem);
 
 $font-size-header: $font-size-medium;
 $font-size-header-logo: $font-size-larger;

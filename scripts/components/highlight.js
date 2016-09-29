@@ -1,20 +1,20 @@
 import React from 'react';
 
- const Highlight = (props) =>  {
-   return <div className="l-highlight l-highlight--{props.type}">
-    <div className="c-highlight__cover">
-      <div className="c-highlight__cover__content">
-        <h2 className="c-highlight__cover__title">
-          {props.title}
-        </h2>
-        <h4 className="c-highlight__cover__subtitle">
-          {props.subtitle}
-        </h4>
-        <hr className="c-highlight__cover__line"></hr>
-        <h5 className="c-highlight__cover__category">{props.category}</h5>
-      </div>
-      </div>
-      <img className="c-highlight__image" src={props.imageUrl} alt={props.alt}></img>
+const Highlight = (props) =>  {
+  return <div className='l-highlight l-highlight--{props.type}'>
+    <div className='c-highlight__cover'>
+    <div className='c-highlight__cover__content'>
+      <h2 className='c-highlight__cover__title'>
+        {props.title}
+      </h2>
+      <h4 className='c-highlight__cover__subtitle'>
+        {props.subtitle}
+      </h4>
+      <hr className='c-highlight__cover__line'></hr>
+      <h5 className='c-highlight__cover__category'>{props.category}</h5>
+    </div>
+    </div>
+    <img className='c-highlight__image' src={props.imageUrl} alt={props.alt}></img>
     </div>
 };
 
@@ -27,10 +27,10 @@ Highlight.propTypes = {
 };
 Highlight.defaultProps = {
   type: 'secondary',
-  title: "Project X",
-  subtitle: "A true mistery",
-  category: "Works",
-  imageUrl: "http://placehold.it/360/240"
+  title: 'Project X',
+  subtitle: 'A true mistery',
+  category: 'Works',
+  imageUrl: 'http://placehold.it/360/240'
 };
 
 export default Highlight;

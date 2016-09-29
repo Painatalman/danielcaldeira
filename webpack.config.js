@@ -8,7 +8,8 @@ module.exports = {
   },
   devtool: 'source-map',
   eslint: {
-    configFile: './.eslintrc.js'
+    failOnWarning: false,
+    failOnError: true
   },
   module: {
     loaders: [
