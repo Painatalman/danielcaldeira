@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, IndexLink, browserHistory, hashHistory } from 'react-router';
 
+import Layout from './components/layout';
 import HomePage from './components/pages/home';
 import AboutPage from './components/pages/about';
 import ContactsPage from './components/pages/contacts';
+import NotFoundPage from './components/pages/notfound';
 
 import ProjectStore from './stores/projectStore';
 import Project from './models/Project';
+
+import LanguageManager from './config/languages';
 
 let mainData = {
   imageUrl: '/pictures/headlines/imagem_highlight_primary.jpg',
@@ -20,6 +24,7 @@ let mainData = {
 
 window.Project = Project;
 window.projectStore = new ProjectStore();
+window.languageManager = new LanguageManager();
 
 let dataItems = [
   {
@@ -59,10 +64,13 @@ let dataItems = [
 dataItems.forEach((item) => projectStore.addProject(item));
 
 ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path='/' component={HomePage} mainData={mainData} store={projectStore}></Route>
-    <Route path='/about' component={AboutPage}></Route>
-    <Route path='/contacts' component={ContactsPage}></Route>
+  <Router history={hashHistory}>
+    <Route path='/' component={Layout} languageManager={languageManager}>
+      <IndexRoute component={HomePage} mainData={mainData} store={projectStore} languageManager={languageManager}></IndexRoute>
+      <Route path='about' component={AboutPage} languageManager={languageManager}></Route>
+      <Route path='contacts' component={ContactsPage} languageManager={languageManager}></Route>
+      <Route path='*' component={NotFoundPage} languageManager={languageManager}></Route>
+    </Route>
   </Router>
     , document.getElementById('main-app')
 

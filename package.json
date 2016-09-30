@@ -15,6 +15,8 @@
     "gulp": "gulp",
     "scripts": "webpack",
     "styles": "gulp css",
+    "check-outdated": "npm outdated",
+    "clean-modules": "npm prune",
     "test": "echo testing",
     "predeploy": "echo im about to deploy",
     "postdeploy": "echo ive deployed"

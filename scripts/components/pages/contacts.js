@@ -5,7 +5,6 @@ import Footer from '../footer.js';
 
 const ContactsPage = (props) => (
   <div>
-<Header></Header>
 <div className="row">
   <div className="col-xs-12">
     <h1>Contacts</h1>
@@ -19,7 +18,6 @@ const ContactsPage = (props) => (
     Coming soon...
   </div>
 </div>
-<Footer></Footer>
 </div>
 );
 

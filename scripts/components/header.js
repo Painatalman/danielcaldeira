@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Header = () => (
+import { observer } from 'mobx-react';
+
+const Header = (props) => (
   <header className="c-header l-header l-main-header">
     <div className="row l-header__row">
       <div className="col-xs-1 l-header__col">
@@ -22,8 +24,8 @@ const Header = () => (
             <div className="col-xs-4 col-xs-offset-8 l-header__col">
               <nav className="c-header__menu">
                 <div className="c-header__menu-list menu-list row">
-                  <div className="col-xs-6"><a className="c-header__menu-item menu-list__item has-separator">PT</a></div>
-                  <div className="col-xs-6"><a className="c-header__menu-item menu-list__item">EN</a></div>
+                  <div className="col-xs-6"><a className="c-header__menu-item menu-list__item has-separator" onClick={props.languageManager.setLanguage.bind(props.languageManager, 'PT')}>PT</a></div>
+                  <div className="col-xs-6"><a className="c-header__menu-item menu-list__item" onClick={props.languageManager.setLanguage.bind(props.languageManager, 'EN')}>EN</a></div>
                 </div>
               </nav>
             </div>
@@ -31,13 +33,13 @@ const Header = () => (
           <div className="row l-header__row c-header__menu c-header__menu--pages">
               <nav className="c-header__menu">
                   <div className="col-xs-4">
-                    <Link to="/" className="c-header__menu-item menu-list__item">Projetos</Link>
+                    <Link to="/" className="c-header__menu-item menu-list__item" activeClassName="active">Projetos</Link>
                   </div>
                   <div className="col-xs-4">
-                    <Link to="/about" className="c-header__menu-item menu-list__item">Sobre Mim</Link>
+                    <Link to="/about" className="c-header__menu-item menu-list__item" activeClassName="active">Sobre Mim</Link>
                   </div>
                   <div className="col-xs-4">
-                    <Link to="/contacts" className="c-header__menu-item menu-list__item">Contactos</Link>
+                    <Link to="/contacts" className="c-header__menu-item menu-list__item" activeClassName="active">Contactos</Link>
                   </div>
               </nav>
           </div>
@@ -47,4 +49,4 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+export default observer(Header);

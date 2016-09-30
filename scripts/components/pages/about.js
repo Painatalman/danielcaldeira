@@ -1,14 +1,14 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 
 import Header from '../header.js';
 import Footer from '../footer.js';
 
 const AboutPage = (props) => (
   <div>
-<Header></Header>
 <div className="row">
   <div className="col-xs-12">
-    <h1>About Me</h1>
+    <h1>About Me - {props.route.languageManager.currentLanguage}</h1>
   </div>
 </div>
 <div className='row'>
@@ -22,8 +22,7 @@ const AboutPage = (props) => (
     Coming soon...
   </div>
 </div>
-<Footer></Footer>
 </div>
 );
 
-export default AboutPage;
+export default observer(AboutPage);

@@ -8,7 +8,6 @@ import Highlight from '../highlight.js';
 
 const HomePage = (props) => (
   <div>
-<Header></Header>
 <div className='row'>
   <div className='col-xs-12'>
     <Highlight type='primary' title={props.route.mainData.title} subtitle={props.route.mainData.subtitle} category={props.route.mainData.category} imageUrl={props.route.mainData.imageUrl} ></Highlight>
@@ -25,7 +24,6 @@ const HomePage = (props) => (
     })
   }
 </div>
-<Footer></Footer>
 <DevTools />
 </div>
 );
