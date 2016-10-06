@@ -7,6 +7,8 @@
 @import "partials/menus";
 @import "partials/components";
 
+@import "partials/animations";
+
 #main-content {
   overflow: auto;
   position: absolute;

@@ -15,10 +15,10 @@ const HomePage = (props) => (
 </div>
 <div className='row'>
   {
-    props.route.store.projects.map( (item) => {
+    props.route.store.projects.map( (item, num) => {
       return (
         <div className='col-xs-12 col-sm-6'>
-          <Highlight type={item.type} imageUrl={item.imageUrl} subtitle={item.subtitle} alt={item.alt} title={item.title} category={item.category} />
+          <Highlight key={num} type={item.type} imageUrl={item.imageUrl} subtitle={item.subtitle} alt={item.alt} title={item.title} category={item.category} />
         </div>
       );
     })
