@@ -28155,18 +28155,14 @@
 	      { className: 'row l-header__row' },
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'col-xs-1 l-header__col' },
-	        _react2.default.createElement('img', { src: '/pictures/logo_header.png', alt: '', className: 'c-header__logo' })
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'col-xs-3 l-header__col' },
+	        { className: 'col-xs-6 l-header__col' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'l-header__logo-name' },
+	          { className: 'c-header__logo' },
+	          _react2.default.createElement('img', { src: '/pictures/logo_header.png', alt: '', className: 'c-header__logo-image' }),
 	          _react2.default.createElement(
 	            'p',
-	            { className: 'l-header__logo-name__content' },
+	            { className: 'c-header__logo-name' },
 	            _react2.default.createElement(
 	              'b',
 	              null,
@@ -28183,7 +28179,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'col-xs-6 col-xs-offset-2 l-header__col pull-right' },
+	        { className: 'col-xs-6 l-header__col pull-right' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'l-header__menu' },
@@ -31125,9 +31121,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Highlight = function Highlight(props) {
+	  var highlightClassName = 'l-highlight l-highlight--' + props.type;
+	
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'l-highlight l-highlight--{props.type}' },
+	    { className: highlightClassName },
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'c-highlight__cover' },

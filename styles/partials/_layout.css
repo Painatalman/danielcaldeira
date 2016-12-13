@@ -47,23 +47,6 @@ $border-default: 3px solid $white;
   &__col, &__row {
     height: 100%;
   }
-
-  &__logo {
-    /*width: 75px;
-    height: 75px;
-    height: auto;*/
-  }
-
-  &__logo-name {
-    display: table;
-    height: 100%;
-    font-size: $font-size-header-logo;
-
-    &__content {
-      display: table-cell;
-      vertical-align: bottom;
-    }
-  }
 }
 
 .l-main-header {

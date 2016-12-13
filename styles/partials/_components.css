@@ -17,13 +17,17 @@ $visor-width: 15px;
 }
 
 
-.c-header {
-  &__logo-name {
-    height: 100%;
-    &__content {
-      display: table-cell;
-      vertical-align: bottom;
-    }
+.c-header__logo {
+  display: table;
+  
+  &-image {
+    padding-right: 12px;
+  }
+
+  &-name {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: $font-size-header-logo;
   }
 }
 

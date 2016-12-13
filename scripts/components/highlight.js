@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Highlight = (props) =>  {
-  return <div className='l-highlight l-highlight--{props.type}'>
+  let highlightClassName = `l-highlight l-highlight--${props.type}`;
+  
+  return <div className={highlightClassName}>
     <div className='c-highlight__cover'>
     <div className='c-highlight__cover__content'>
       <h2 className='c-highlight__cover__title'>
