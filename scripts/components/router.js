@@ -6,7 +6,7 @@ import routes from '../routes';
 
 export default class AppRoutes extends React.Component{
   render(){return (
-  <Router history={browserHistory} routes={routes}>
+  <Router history={hashHistory} routes={routes}>
   </Router>);
 }
 }
