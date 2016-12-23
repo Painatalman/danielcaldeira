@@ -48,7 +48,7 @@ table {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-family-default;
   background: $gray;
   color: $black;
   font-size: 16px;

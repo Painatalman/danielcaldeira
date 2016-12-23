@@ -1,5 +1,20 @@
 @import "colors";
 @import "font-sizes";
 
+@font-face {
+  font-family: 'HKGrotesk';
+  src: url('/fonts/HKGrotesk-Regular.otf'); 
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 700;
+  src: url('/fonts/HKGrotesk-Bold.otf'); 
+}
+
 $font-color-default: $black;
 $font-size-default: $font-size-large;
+/*
+$font-family-default: "Montserrat", sans-serif;
+*/
+$font-family-default: "HKGrotesk";
